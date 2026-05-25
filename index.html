@@ -16,9 +16,10 @@
 
 <header class="masthead">
   <div class="masthead-inner">
-    <p class="kicker">Marblehead, Massachusetts</p>
-    <h1>2026 Town Election Voter Guide</h1>
-    <p class="dek">Annual Town Election &middot; Tuesday, June 9, 2026</p>
+    <img class="masthead-logo" src="assets/images/logo-stacked.webp" alt="The Marblehead Independent" width="220" height="154">
+    <p class="kicker">2026 Annual Town Election</p>
+    <h1>Voter Guide</h1>
+    <p class="dek">Every candidate, every ballot question &middot; Tuesday, June 9, 2026</p>
   </div>
 </header>
 
@@ -62,11 +63,12 @@
   <!-- CONTESTED RACES                                            -->
   <!-- ========================================================== -->
   <section id="contested" class="race-group">
-    <div class="group-header">
+    <header class="group-header">
       <p class="group-label">Contested races</p>
       <h2 class="group-title">Where your vote decides the outcome</h2>
+      <div class="header-rule"></div>
       <p class="group-blurb">Six races on this ballot have more candidates than seats. They appear here in the order printed on the ballot.</p>
-    </div>
+    </header>
 
     <!-- ====================== SELECT BOARD ====================== -->
     <article id="select-board" class="race">
@@ -758,11 +760,12 @@
   <!-- BALLOT QUESTIONS                                            -->
   <!-- ========================================================== -->
   <section id="ballot-questions" class="race-group questions-group">
-    <div class="group-header">
+    <header class="group-header">
       <p class="group-label">Ballot questions</p>
       <h2 class="group-title">Four questions on the back of the ballot</h2>
+      <div class="header-rule"></div>
       <p class="group-blurb">Questions 1, 2 and 3 are <strong>competing override questions</strong>. You may vote for or against each independently. If more than one passes, the question with the highest dollar amount prevails. Question 4 is separate.</p>
-    </div>
+    </header>
 
     <div class="questions">
 
@@ -800,17 +803,40 @@
       </article>
 
     </div>
+
+    <!-- Override matrix widget: what each tier funds -->
+    <p class="widget-intro"><strong>What does each tier actually fund?</strong> The interactive matrix below breaks down Questions&nbsp;1, 2 and 3 line by line &mdash; what gets restored, what gets added and where the dollars go.</p>
+    <div class="embed-card">
+      <iframe class="embed-frame embed-frame-overrides"
+              src="https://wdowd-arch.github.io/mhdtm-2026-overridematrix-month/"
+              title="Override scenarios: what each tier funds"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <!-- Tax bills matrix widget: what each option costs the typical home -->
+    <p class="widget-intro"><strong>What would it cost?</strong> The matrix below shows how each override scenario would change the tax bill on the median Marblehead single-family home.</p>
+    <div class="embed-card">
+      <iframe class="embed-frame embed-frame-taxbills"
+              src="https://wdowd-arch.github.io/mhdtm-2026-levymatrix-taxbills/"
+              title="Tax-bill impact for each override scenario"
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+
+    <p class="source-cite"><em>Override widgets by </em><a href="https://www.marbleheadindependent.com/" target="_blank" rel="noopener"><em>The Marblehead Independent</em></a><em>. See also the </em><a href="https://wdowd-arch.github.io/marblehead-town-meeting-guide/" target="_blank" rel="noopener"><em>2026 Town Meeting Voter Guide</em></a><em> for the full budget context.</em></p>
   </section>
 
   <!-- ========================================================== -->
   <!-- UNCONTESTED RACES                                           -->
   <!-- ========================================================== -->
   <section id="uncontested" class="race-group">
-    <div class="group-header">
+    <header class="group-header">
       <p class="group-label">Uncontested races</p>
       <h2 class="group-title">Candidates running unopposed</h2>
+      <div class="header-rule"></div>
       <p class="group-blurb">These races have the same number of candidates as open seats. Write-in lines are still available on the ballot.</p>
-    </div>
+    </header>
 
     <div class="uncontested-list">
 
@@ -875,10 +901,11 @@
   <!-- VOTING INFO                                                 -->
   <!-- ========================================================== -->
   <section id="voting-info" class="race-group voting-group">
-    <div class="group-header">
+    <header class="group-header">
       <p class="group-label">How to vote</p>
       <h2 class="group-title">Times, places and the sample ballot</h2>
-    </div>
+      <div class="header-rule"></div>
+    </header>
 
     <div class="voting-blocks">
 
@@ -913,8 +940,8 @@
 
 <footer class="site-footer">
   <div class="footer-inner">
-    <p>Candidate questionnaire responses collected by <em>The Marblehead Independent</em>. Ballot order and address information reproduced from the official sample ballot issued by the Marblehead Town Clerk.</p>
-    <p class="small">Last updated <time datetime="2026-05-24">May 24, 2026</time>. This guide is published for informational purposes and is not an endorsement of any candidate or position.</p>
+    <p>Candidate questionnaire responses collected by <a href="https://www.marbleheadindependent.com/" target="_blank" rel="noopener"><em>The Marblehead Independent</em></a>. Ballot order and address information reproduced from the official sample ballot issued by the Marblehead Town Clerk. Override widgets adapted from the <a href="https://wdowd-arch.github.io/marblehead-town-meeting-guide/" target="_blank" rel="noopener">2026 Town Meeting Voter Guide</a>.</p>
+    <p class="small">Last updated <time datetime="2026-05-24">May 24, 2026</time>. This guide is published for informational purposes and is not an endorsement of any candidate or ballot question.</p>
   </div>
 </footer>
 
