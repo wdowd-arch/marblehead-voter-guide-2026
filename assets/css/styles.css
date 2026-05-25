@@ -756,11 +756,24 @@ main { display: block; }
 .expand-toggle:hover { background: var(--paper-deep); border-color: var(--ink-mute); }
 .expand-toggle[aria-pressed="true"] { background: var(--navy); color: #fff; border-color: var(--navy); }
 
-/* ============== RESPONSIVE ============== */
+/* ============================================================
+   RESPONSIVE
+   Mobile-first base. Three named breakpoints:
+   - ≤540px:  phone (compressed type, single-col, edge-to-edge cards)
+   - ≥720px:  tablet+ (wider content column, larger type)
+   - ≥1080px: desktop (full editorial width, prominent headings,
+              roomier candidate cards, wider grid columns)
+   ============================================================ */
+
+/* === Phone (≤540px) =================================== */
 @media (max-width: 540px) {
   body { font-size: 16px; }
   .masthead { padding: 22px 14px 24px; }
   .masthead-logo { width: 130px; margin-bottom: 14px; }
+  .quick-facts { margin-top: 22px; padding: 0 14px; }
+  .facts-grid { padding: 14px 16px; }
+  .intro { padding: 0 14px; font-size: 16px; }
+  .race-group { padding: 0 14px 4px; }
   .race { padding: 16px 14px 10px; }
   .candidate { padding: 14px 14px 12px; }
   .portrait { width: 68px; height: 68px; }
@@ -771,14 +784,115 @@ main { display: block; }
   .qa-body { padding: 14px 16px 4px; font-size: 15px; }
   .nav-inner { padding: .5rem .8rem; justify-content: flex-start; }
   .site-nav a { font-size: 12px; letter-spacing: 1.2px; padding: .45rem .75rem; }
-  .group-header { padding: 18px 18px 20px; margin: 32px -20px 22px; }
+  .group-header { padding: 18px 18px 20px; margin: 32px -14px 22px; }
+  .group-header .group-title { font-size: clamp(20px, 5vw, 26px); }
   .candidate-head { gap: 14px; }
+  .event-callout { padding: 16px 16px 18px; }
+  .event-callout .ec-title { font-size: 20px; }
+  .voting-block { padding: 14px 16px; }
 }
 
-@media (min-width: 900px) {
+/* === Tablet+ (≥720px) ================================= */
+@media (min-width: 720px) {
+  body { font-size: 18px; }
+  .masthead { padding: 36px 24px 38px; }
+  .masthead-logo { width: 200px; margin-bottom: 18px; }
+  .masthead h1 { font-size: clamp(36px, 5vw, 46px); }
+  .quick-facts { max-width: 880px; }
+  .facts-grid { padding: 20px 26px; gap: 18px; }
+  .intro { max-width: 760px; font-size: 19px; line-height: 1.8; }
+  .race-group { padding: 0 24px 8px; max-width: 880px; }
+  .group-header { padding: 28px 32px 30px; margin: 56px -24px 32px; }
+  .group-header .group-title { font-size: clamp(28px, 4vw, 36px); }
+  .group-header .group-blurb { font-size: 17px; }
+  .race { padding: 28px 30px 18px; }
+  .race-title { font-size: clamp(24px, 3.4vw, 30px); }
+  .race-meta { font-size: 16px; }
+  .candidate { padding: 22px 24px 18px; }
   .candidate-head { gap: 22px; }
-  .portrait { width: 104px; height: 104px; }
-  .portrait-initials { font-size: 32px; }
+  .cand-name { font-size: 22px; }
+  .cand-address, .cand-contact { font-size: 16px; }
+  .qa-body { padding: 22px 28px 6px; font-size: 17px; line-height: 1.75; }
+  .qa-body h5 { font-size: 17px; }
+  .question { padding: 20px 24px; }
+  .q-amount { font-size: 28px; }
+  .q-body { font-size: 17px; }
+  .questions { max-width: 880px; }
+  .uncontested-list { max-width: 880px; }
+  .voting-blocks { max-width: 880px; }
+  .voting-block { padding: 22px 26px; }
+  .voting-block .big-date { font-size: 26px; }
+  .voting-block h3 { font-size: 20px; }
+  .event-callout { padding: 26px 30px 28px; }
+  .event-callout .ec-title { font-size: 26px; }
+  .event-callout .ec-when { font-size: 17px; }
+  .update-note { padding: 18px 24px; }
+  .letters-section { padding: 24px 28px 26px; }
+  .letters-section .letters-list li { font-size: 16px; }
+  .letters-section .letter-title { font-size: 17px; }
+  .footer-inner { font-size: 16px; }
+}
+
+/* === Desktop (≥1080px) ================================ */
+@media (min-width: 1080px) {
+  html { scroll-padding-top: 84px; }
+  .masthead { padding: 48px 32px 52px; border-bottom-width: 6px; }
+  .masthead-logo { width: 240px; margin-bottom: 22px; }
+  .masthead .kicker { font-size: 16px; letter-spacing: 1.8px; }
+  .masthead h1 { font-size: 52px; line-height: 1.1; }
+  .masthead .dek { font-size: 22px; }
+  .site-nav .nav-inner { padding: .7rem 1rem; }
+  .site-nav a { font-size: 14px; padding: .6rem 1.1rem; }
+  .quick-facts { max-width: 1040px; margin-top: 38px; }
+  .facts-grid { padding: 24px 32px; gap: 22px; }
+  .intro { max-width: 820px; font-size: 20px; margin-top: 36px; padding: 0 32px; }
+  .event-callout { max-width: 820px; padding: 30px 36px 32px; }
+  .event-callout .ec-title { font-size: 30px; }
+  .update-note { max-width: 820px; }
+  .race-group { max-width: 1040px; padding: 0 32px 8px; }
+  .group-header { padding: 36px 40px 38px; margin: 64px -32px 40px; }
+  .group-header .group-label { font-size: 14px; letter-spacing: 1.6px; }
+  .group-header .group-title { font-size: 42px; line-height: 1.1; }
+  .group-header .group-blurb { font-size: 18px; margin-top: 16px; }
+  .race { padding: 34px 40px 22px; margin-bottom: 28px; }
+  .race-eyebrow { font-size: 13px; letter-spacing: 1.4px; }
+  .race-title { font-size: 32px; }
+  .race-meta { font-size: 17px; }
+  .candidate { padding: 26px 30px 22px; }
+  .candidate-head { gap: 28px; }
+  .portrait { width: 116px; height: 116px; }
+  .portrait-initials { font-size: 36px; }
+  .cand-name { font-size: 26px; }
+  .cand-address, .cand-contact { font-size: 17px; }
+  .qa > summary { font-size: 15px; padding: 12px 22px; }
+  .qa-body { padding: 28px 36px 10px; font-size: 18px; line-height: 1.8; }
+  .qa-body h5 { font-size: 18px; margin: 30px 0 10px; }
+  .questions { max-width: 1040px; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(360px, 1fr)); }
+  .question { padding: 24px 28px; border-left-width: 6px; }
+  .q-amount { font-size: 32px; }
+  .q-body { font-size: 18px; }
+  .uncontested-list { max-width: 1040px; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); }
+  .uncontested-race { padding: 18px 24px; }
+  .uncontested-race h3 { font-size: 20px; }
+  .uncontested-race li { font-size: 16px; }
+  .voting-blocks { max-width: 1040px; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .voting-block { padding: 26px 30px; }
+  .voting-block h3 { font-size: 22px; }
+  .voting-block .big-date { font-size: 28px; }
+  .letters-section { max-width: 820px; padding: 28px 34px 30px; }
+  .footer-inner { max-width: 820px; font-size: 17px; }
+  .embed-card { width: min(100vw - 48px, 1100px); }
+}
+
+/* === Wide desktop (≥1400px) =========================== */
+@media (min-width: 1400px) {
+  .masthead h1 { font-size: 60px; }
+  .race-group { max-width: 1120px; }
+  .quick-facts { max-width: 1120px; }
+  .questions { max-width: 1120px; }
+  .uncontested-list { max-width: 1120px; }
+  .voting-blocks { max-width: 1120px; }
+  .race { padding: 38px 48px 26px; }
 }
 
 /* ============== PRINT ============== */
