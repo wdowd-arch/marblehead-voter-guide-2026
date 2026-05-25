@@ -257,23 +257,8 @@ main { display: block; }
   color: var(--ink);
 }
 
-/* Precinct-map embed (smaller variant of embed-card) */
-.precinct-map {
-  margin: 14px 0 4px;
-  border: 1px solid var(--rule);
-  border-radius: 4px;
-  overflow: hidden;
-  background: var(--paper-deep);
-}
-.precinct-map iframe {
-  width: 100%;
-  height: 460px;
-  border: 0;
-  display: block;
-}
-@media (max-width: 540px) {
-  .precinct-map iframe { height: 360px; }
-}
+/* (Precinct-map iframe removed; AxisGIS link now lives inline in the
+   voting-info resources line.) */
 
 /* ============== UPDATE NOTE (Indy "update-note" pattern) ============== */
 .update-note {
@@ -700,57 +685,31 @@ main { display: block; }
 .uncontested-race li strong { color: var(--ink); font-weight: 700; }
 .re { color: var(--red); font-size: 10px; letter-spacing: 1.2px; text-transform: uppercase; font-weight: 700; margin-left: 4px; }
 
-/* ============== VOTING INFO ============== */
-.voting-blocks {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 16px;
-  max-width: 720px; margin: 0 auto;
+/* ============== VOTING INFO (clean typography, no cards) ============== */
+.voting-info {
+  max-width: 680px;
+  margin: 0 auto;
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.7;
+  color: var(--ink);
 }
-.voting-block {
-  background: #fff;
-  border: 1px solid var(--rule);
-  border-top: 4px solid var(--red);
-  border-radius: 4px;
-  padding: 18px 20px;
-}
-.voting-block h3 {
-  font-family: var(--serif); font-weight: 700; font-size: 18px;
-  margin: 0 0 10px; color: var(--navy); letter-spacing: -.2px;
+.vinfo-line { margin: 0 0 14px; }
+.vinfo-line:last-child { margin-bottom: 0; }
+.vinfo-line strong { color: var(--navy); }
+.vinfo-line a { color: var(--link); }
+.vinfo-resources {
+  margin-top: 18px;
+  padding-top: 12px;
+  border-top: 1px solid var(--rule);
+  font-size: 14px;
+  color: var(--ink-mute);
   text-align: center;
 }
-.voting-block p { margin: 0 0 10px; line-height: 1.6; }
-.voting-block .big-date {
-  font-family: var(--serif); font-weight: 700; font-size: 22px; color: var(--ink); margin-bottom: 10px; letter-spacing: -.3px;
-}
-.voting-block .hours { list-style: none; padding: 0; margin: 0 0 10px; }
-.voting-block .hours li {
-  padding: 7px 0;
-  border-bottom: 1px solid var(--rule);
-  font-family: var(--serif); font-size: 15px;
-}
-.voting-block .hours li:last-child { border-bottom: none; }
-.voting-block .small { font-size: 13px; color: var(--ink-mute); font-style: italic; }
+.vinfo-resources a { color: var(--ink-soft); }
 
-/* Indy companion-link button style */
-.btn-link {
-  display: inline-block;
-  font-family: var(--serif); font-weight: 700; font-size: 14px; letter-spacing: .3px;
-  color: #fff !important;
-  background: var(--red);
-  padding: 10px 16px;
-  border-radius: 4px;
-  border: 1px solid var(--red);
-  box-shadow: 0 4px 14px rgba(194, 38, 29, 0.16);
-  text-decoration: none;
-  transition: background .15s, transform .15s, border-color .15s;
-}
-.btn-link:hover {
-  background: var(--red-deep);
-  border-color: var(--red-deep);
-  text-decoration: none;
-  transform: translateY(-1px);
-}
+/* (Red companion-link CTA button retired; voting info uses inline
+   text links instead of buttons.) */
 
 /* ============== SOURCE CITE ============== */
 .source-cite {
@@ -832,7 +791,7 @@ main { display: block; }
   .candidate-head { gap: 14px; }
   .event-callout { padding: 16px 16px 18px; }
   .event-callout .ec-title { font-size: 20px; }
-  .voting-block { padding: 14px 16px; }
+  .voting-info { font-size: 16px; padding: 0 14px; }
 }
 
 /* === Tablet+ (≥720px) ================================= */
@@ -862,10 +821,7 @@ main { display: block; }
   .q-body { font-size: 17px; }
   .questions { max-width: 880px; }
   .uncontested-list { max-width: 880px; }
-  .voting-blocks { max-width: 880px; }
-  .voting-block { padding: 22px 26px; }
-  .voting-block .big-date { font-size: 26px; }
-  .voting-block h3 { font-size: 20px; }
+  .voting-info { max-width: 720px; font-size: 18px; }
   .event-callout { padding: 26px 30px 28px; }
   .event-callout .ec-title { font-size: 26px; }
   .event-callout .ec-when { font-size: 17px; }
@@ -918,10 +874,7 @@ main { display: block; }
   .uncontested-race { padding: 18px 24px; }
   .uncontested-race h3 { font-size: 20px; }
   .uncontested-race li { font-size: 16px; }
-  .voting-blocks { max-width: 1040px; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-  .voting-block { padding: 26px 30px; }
-  .voting-block h3 { font-size: 22px; }
-  .voting-block .big-date { font-size: 28px; }
+  .voting-info { max-width: 760px; font-size: 19px; }
   .letters-section { max-width: 820px; padding: 28px 34px 30px; }
   .footer-inner { max-width: 820px; font-size: 17px; }
   .embed-card { width: min(100vw - 48px, 1100px); }
@@ -934,20 +887,20 @@ main { display: block; }
   .quick-facts { max-width: 1120px; }
   .questions { max-width: 1120px; }
   .uncontested-list { max-width: 1120px; }
-  .voting-blocks { max-width: 1120px; }
+  .voting-info { max-width: 800px; }
   .race { padding: 38px 48px 26px; }
 }
 
 /* ============== PRINT ============== */
 @media print {
   body { background: #fff; color: #000; font-size: 11pt; }
-  .site-nav, .skip-link, .btn-link, .embed-card, .widget-intro { display: none !important; }
+  .site-nav, .skip-link, .embed-card, .widget-intro { display: none !important; }
   .masthead { background: #fff; color: #000; border-bottom: 3px solid #000; padding: 1rem 0; }
   .masthead-logo { filter: none; }
   .kicker, .race-eyebrow, .group-header .group-label, .q-num { color: #000; }
   .group-header { background: #fff; color: #000; border-top: 3px solid #000; }
   .group-header .group-title, .group-header .group-blurb { color: #000; }
-  .race, .candidate, .question, .uncontested-race, .voting-block, .facts-grid {
+  .race, .candidate, .question, .uncontested-race, .voting-info, .facts-grid {
     box-shadow: none; border: 1px solid #999; break-inside: avoid; page-break-inside: avoid;
   }
   .qa { border-top: 1px solid #ccc; }
