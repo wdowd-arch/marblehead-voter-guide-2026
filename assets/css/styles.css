@@ -373,7 +373,7 @@ main { display: block; }
   font-size: 28px;
 }
 
-.ident { flex: 1 1 auto; min-width: 0; }
+.ident { flex: 1 1 auto; min-width: 0; text-align: center; }
 .cand-name {
   font-family: var(--serif); font-weight: 700;
   font-size: 21px; line-height: 1.25;
@@ -401,6 +401,7 @@ main { display: block; }
   margin-top: 14px;
   padding-top: 12px;
   border-top: 1px dashed var(--rule);
+  text-align: center;
 }
 .letters-label {
   margin: 0 0 8px;
@@ -513,6 +514,7 @@ main { display: block; }
   margin-top: 14px;
   border-top: 1px solid var(--rule);
   padding-top: 12px;
+  text-align: center;
 }
 .qa > summary {
   cursor: pointer;
@@ -546,6 +548,7 @@ main { display: block; }
   font-size: 16px;
   line-height: 1.75;
   color: var(--ink);
+  text-align: left; /* keep long answers readable */
 }
 .qa-body h5 {
   font-family: var(--serif);
