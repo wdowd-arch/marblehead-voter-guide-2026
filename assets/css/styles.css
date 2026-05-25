@@ -111,6 +111,7 @@ img { max-width: 100%; height: auto; display: block; }
 .nav-inner {
   max-width: 1080px; margin: 0 auto;
   display: flex; gap: .25rem;
+  justify-content: center;
   overflow-x: auto;
   padding: .6rem 1rem;
   scrollbar-width: none;
@@ -119,11 +120,13 @@ img { max-width: 100%; height: auto; display: block; }
 .site-nav a {
   flex: 0 0 auto;
   font-family: var(--serif);
-  font-size: 15px;
+  font-size: 13px;
   font-weight: 700;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
   color: var(--navy);
   text-decoration: none;
-  padding: .5rem .95rem;
+  padding: .55rem 1rem;
   border-radius: 4px;
   white-space: nowrap;
   transition: background .15s, color .15s;
@@ -573,8 +576,8 @@ main { display: block; }
   .incumbent { display: inline-block; margin-left: 0; margin-top: 4px; font-size: 9px; top: 0; }
   .qa > summary { font-size: 13px; padding: 8px 14px; }
   .qa-body { padding: 14px 16px 4px; font-size: 15px; }
-  .nav-inner { padding: .5rem .8rem; }
-  .site-nav a { font-size: 14px; padding: .45rem .75rem; }
+  .nav-inner { padding: .5rem .8rem; justify-content: flex-start; }
+  .site-nav a { font-size: 12px; letter-spacing: 1.2px; padding: .45rem .75rem; }
   .group-header { padding: 18px 18px 20px; margin: 32px -20px 22px; }
   .candidate-head { gap: 14px; }
 }
