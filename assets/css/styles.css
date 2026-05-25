@@ -354,15 +354,11 @@ main { display: block; }
 }
 .candidate:hover { border-color: var(--ink-mute); box-shadow: var(--shadow-card); }
 
-.candidate-head {
-  display: flex; flex-direction: column; align-items: center;
-  gap: 14px;
-  text-align: center;
-}
+.candidate-head { display: flex; gap: 18px; align-items: flex-start; }
 
 .portrait {
   flex: 0 0 auto;
-  width: 120px; height: 120px;
+  width: 90px; height: 90px;
   border-radius: 50%;
   object-fit: cover;
   background: var(--paper-deep);
@@ -374,14 +370,14 @@ main { display: block; }
   color: var(--navy);
   font-family: var(--serif);
   font-weight: 700;
-  font-size: 36px;
+  font-size: 28px;
 }
 
-.ident { width: 100%; min-width: 0; }
+.ident { flex: 1 1 auto; min-width: 0; }
 .cand-name {
   font-family: var(--serif); font-weight: 700;
-  font-size: 22px; line-height: 1.25;
-  margin: 0 0 6px; color: var(--ink); letter-spacing: -.2px;
+  font-size: 21px; line-height: 1.25;
+  margin: 0 0 4px; color: var(--ink); letter-spacing: -.2px;
 }
 .incumbent {
   display: inline-block; vertical-align: middle;
@@ -393,12 +389,12 @@ main { display: block; }
   margin-left: 6px;
   white-space: nowrap;
   position: relative;
-  top: -3px;
+  top: -2px;
 }
 .cand-address { margin: 0 0 4px; color: var(--ink-mute); font-size: 15px; font-style: italic; }
 .cand-contact { margin: 0; color: var(--ink-soft); font-size: 15px; word-break: break-word; }
 .cand-contact a { color: var(--link); }
-.cand-noresp { margin: 6px auto 0; color: var(--ink-mute); font-style: italic; font-size: 14px; max-width: 32em; }
+.cand-noresp { margin: 6px 0 0; color: var(--ink-mute); font-style: italic; font-size: 14px; }
 
 /* ============== LETTERS TO THE EDITOR ============== */
 .letters {
@@ -766,23 +762,23 @@ main { display: block; }
   .masthead { padding: 22px 14px 24px; }
   .masthead-logo { width: 130px; margin-bottom: 14px; }
   .race { padding: 16px 14px 10px; }
-  .candidate { padding: 16px 14px 14px; }
-  .portrait { width: 96px; height: 96px; }
-  .portrait-initials { font-size: 28px; }
-  .cand-name { font-size: 19px; }
+  .candidate { padding: 14px 14px 12px; }
+  .portrait { width: 68px; height: 68px; }
+  .portrait-initials { font-size: 22px; }
+  .cand-name { font-size: 18px; }
   .incumbent { display: inline-block; margin-left: 0; margin-top: 4px; font-size: 9px; top: 0; }
   .qa > summary { font-size: 13px; padding: 8px 14px; }
   .qa-body { padding: 14px 16px 4px; font-size: 15px; }
   .nav-inner { padding: .5rem .8rem; justify-content: flex-start; }
   .site-nav a { font-size: 12px; letter-spacing: 1.2px; padding: .45rem .75rem; }
   .group-header { padding: 18px 18px 20px; margin: 32px -20px 22px; }
-  .candidate-head { gap: 12px; }
+  .candidate-head { gap: 14px; }
 }
 
 @media (min-width: 900px) {
-  .portrait { width: 140px; height: 140px; }
-  .portrait-initials { font-size: 42px; }
-  .cand-name { font-size: 24px; }
+  .candidate-head { gap: 22px; }
+  .portrait { width: 104px; height: 104px; }
+  .portrait-initials { font-size: 32px; }
 }
 
 /* ============== PRINT ============== */
