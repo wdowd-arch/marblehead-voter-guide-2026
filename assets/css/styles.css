@@ -171,6 +171,46 @@ main { display: block; }
 .intro strong { font-weight: 700; }
 .intro em { font-style: italic; }
 
+/* ============== UPDATE NOTE (Indy "update-note" pattern) ============== */
+.update-note {
+  max-width: 720px;
+  margin: 22px auto 0;
+  padding: 14px 18px;
+  background: var(--paper-deep);
+  border-left: 4px solid var(--navy);
+  border-radius: 4px;
+}
+.update-note .un-label {
+  display: inline-block;
+  font-family: var(--serif);
+  font-size: 11px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--navy);
+  background: #fff;
+  border: 1px solid var(--rule);
+  padding: 2px 8px;
+  border-radius: 3px;
+  margin-bottom: 8px;
+  vertical-align: middle;
+}
+.update-note p {
+  margin: 0 0 6px;
+  font-family: var(--serif);
+  font-size: 15px;
+  line-height: 1.6;
+  color: var(--ink-soft);
+}
+.update-note p:last-child { margin-bottom: 0; }
+.update-note strong { color: var(--navy); font-weight: 700; }
+.update-note .un-stamp {
+  font-size: 13px;
+  font-style: italic;
+  color: var(--ink-mute);
+  margin-top: 4px;
+}
+
 /* ============== SECTION HEADERS (Indy pattern) ============== */
 .race-group { padding: 0 20px 8px; max-width: 760px; margin: 0 auto; }
 
