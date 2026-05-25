@@ -324,6 +324,118 @@ main { display: block; }
 .cand-contact a { color: var(--link); }
 .cand-noresp { margin: 6px 0 0; color: var(--ink-mute); font-style: italic; font-size: 14px; }
 
+/* ============== LETTERS TO THE EDITOR ============== */
+.letters {
+  margin-top: 14px;
+  padding-top: 12px;
+  border-top: 1px dashed var(--rule);
+}
+.letters-label {
+  margin: 0 0 8px;
+  font-family: var(--serif);
+  font-size: 11px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--red);
+}
+.letters-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.letters-list li {
+  font-family: var(--serif);
+  font-size: 14px;
+  line-height: 1.55;
+  margin: 0 0 8px;
+  padding: 0 0 8px;
+  border-bottom: 1px solid var(--rule-soft);
+  color: var(--ink-soft);
+}
+.letters-list li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.letter-date {
+  display: inline;
+  font-size: 13px;
+  color: var(--ink-mute);
+  font-style: italic;
+  margin-right: 4px;
+}
+.letter-author {
+  font-weight: 700;
+  color: var(--ink);
+}
+.letter-title {
+  display: block;
+  margin-top: 2px;
+  font-size: 15px;
+  line-height: 1.45;
+}
+.letter-title a { color: var(--link); }
+
+/* Race-level context callout (e.g. incumbent stepping aside) */
+.race-context {
+  margin: 0 0 18px;
+  padding: 12px 16px;
+  background: var(--paper-deep);
+  border-left: 4px solid var(--red);
+  border-radius: 4px;
+}
+.race-context .rc-label {
+  display: inline-block;
+  margin: 0 0 4px;
+  font-family: var(--serif);
+  font-size: 10px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--red);
+}
+.race-context p {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 15px;
+  line-height: 1.55;
+  color: var(--ink);
+}
+
+/* Section-level letters block (override letters, etc.) */
+.letters-section {
+  max-width: 720px;
+  margin: 30px auto 0;
+  padding: 18px 22px 20px;
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-top: 4px solid var(--red);
+  border-radius: 4px;
+}
+.letters-section .letters-label {
+  font-size: 13px;
+  letter-spacing: 1.4px;
+  margin-bottom: 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--rule);
+}
+.letters-section .letters-list li {
+  font-size: 15px;
+}
+.letters-section .letter-title {
+  font-size: 16px;
+}
+
+/* Letters inside an uncontested-race card */
+.uncontested-race .letters {
+  margin-top: 12px;
+  padding-top: 10px;
+}
+.uncontested-race .letters-label { font-size: 10px; margin-bottom: 6px; }
+.uncontested-race .letters-list li { font-size: 13px; margin-bottom: 6px; padding-bottom: 6px; }
+.uncontested-race .letter-title { font-size: 14px; }
+
 /* ============== Q&A DETAILS ============== */
 .qa {
   margin-top: 14px;
