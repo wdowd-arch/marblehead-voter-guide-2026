@@ -174,6 +174,79 @@ main { display: block; }
 .intro strong { font-weight: 700; }
 .intro em { font-style: italic; }
 
+/* ============== EVENT CALLOUT (upcoming high-value event) ============== */
+.event-callout {
+  max-width: 720px;
+  margin: 22px auto 0;
+  padding: 20px 22px 22px;
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-left: 5px solid var(--red);
+  border-radius: 4px;
+  box-shadow: var(--shadow-card);
+}
+.event-callout .ec-label {
+  display: inline-block;
+  margin: 0 0 6px;
+  font-family: var(--serif);
+  font-size: 11px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #fff;
+  background: var(--red);
+  padding: 3px 9px;
+  border-radius: 3px;
+}
+.event-callout .ec-title {
+  font-family: var(--serif);
+  font-size: 22px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin: 4px 0 8px;
+  color: var(--navy);
+  letter-spacing: -.2px;
+}
+.event-callout .ec-when {
+  font-family: var(--serif);
+  font-size: 16px;
+  margin: 0 0 4px;
+  color: var(--ink);
+}
+.event-callout .ec-when strong { color: var(--navy); }
+.event-callout .ec-where {
+  font-family: var(--serif);
+  font-size: 15px;
+  margin: 0 0 12px;
+  color: var(--ink-soft);
+  font-style: italic;
+}
+.event-callout .ec-body {
+  font-family: var(--serif);
+  font-size: 15px;
+  line-height: 1.6;
+  margin: 0;
+  color: var(--ink);
+}
+
+/* Precinct-map embed (smaller variant of embed-card) */
+.precinct-map {
+  margin: 14px 0 4px;
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  overflow: hidden;
+  background: var(--paper-deep);
+}
+.precinct-map iframe {
+  width: 100%;
+  height: 460px;
+  border: 0;
+  display: block;
+}
+@media (max-width: 540px) {
+  .precinct-map iframe { height: 360px; }
+}
+
 /* ============== UPDATE NOTE (Indy "update-note" pattern) ============== */
 .update-note {
   max-width: 720px;
