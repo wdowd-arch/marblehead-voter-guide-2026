@@ -477,13 +477,22 @@ main { display: block; }
 }
 .qa-body h5 {
   font-family: var(--serif);
-  font-size: 12px; letter-spacing: 1.2px; text-transform: uppercase;
-  font-weight: 700; color: var(--red);
-  margin: 22px 0 6px;
-  padding-bottom: 4px;
-  border-bottom: 1px solid var(--rule);
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 26px 0 8px;
+  line-height: 1.4;
+  letter-spacing: 0;
+  text-transform: none;
+}
+.qa-body h5::before {
+  content: "Q. ";
+  color: var(--red);
+  font-weight: 700;
 }
 .qa-body h5:first-child { margin-top: 0; }
+.qa-body h5 + p::first-letter,
+.qa-body h5 + p { } /* hook reserved for any future styling */
 .qa-body p { margin: 0 0 12px; }
 .qa-body ul, .qa-body ol { margin: 0 0 14px; padding-left: 22px; }
 .qa-body li { margin-bottom: 4px; }
