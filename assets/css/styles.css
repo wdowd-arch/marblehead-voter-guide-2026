@@ -546,6 +546,54 @@ main { display: block; }
   font-size: 16px;
 }
 
+/* ============== INDEPENDENT COVERAGE ============== */
+.coverage-section {
+  max-width: 720px;
+  margin: 30px auto 0;
+  padding: 18px 22px 20px;
+  background: #fff;
+  border: 1px solid var(--rule);
+  border-top: 4px solid var(--navy);
+  border-radius: 4px;
+  text-align: center;
+}
+.coverage-label {
+  margin: 0 0 12px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--rule);
+  font-family: var(--serif);
+  font-size: 13px;
+  letter-spacing: 1.4px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--red);
+}
+.coverage-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.coverage-list li {
+  font-family: var(--serif);
+  font-size: 16px;
+  line-height: 1.6;
+  margin: 0 0 12px;
+  padding: 0 0 12px;
+  border-bottom: 1px solid var(--rule-soft);
+  color: var(--ink);
+}
+.coverage-list li:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+.coverage-date {
+  font-size: 14px;
+  color: var(--ink-mute);
+  font-style: italic;
+}
+.coverage-title { color: var(--link); }
+
 /* Letters inside an uncontested-race card */
 .uncontested-race .letters {
   margin-top: 12px;
